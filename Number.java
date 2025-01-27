@@ -1,7 +1,7 @@
-//© A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
+//ï¿½ A+ Computer Science  -  www.apluscompsci.com
+//Name - John Brasher
+//Date - 1/23/25
+//Class - Leohr
 //Lab  -
 
 public class Number
@@ -18,6 +18,7 @@ public class Number
 	//Modified Constructor
 	public Number(int num)
 	{
+		number =0;
 		setNumber(num);
 	}
 
@@ -35,12 +36,21 @@ public class Number
 	public boolean isOdd()
 	{
 		//If the number is odd, return true
+		if(number % 2 == 1)
+			return true;
+		return false;
 	}
+
 
 	public boolean isPerfect()
 	{
 		int total=0;
 
+		for(int i = 0; i <  number; i++)
+		{
+			if(number%i==0)
+				total+=i;
+		}
 		//A perfect number is any number equal to the sum of its divisors
 		//excluding itself.
 
@@ -57,6 +67,7 @@ public class Number
 		returnString += number + " isOdd == " + isOdd() + "\n";
 		returnString += number + " isPerfect == " + isPerfect() + "\n\n";
 
-		return "" + returnString;
+		//return "" + returnString;
+		return "" + number;
 	}
 }
